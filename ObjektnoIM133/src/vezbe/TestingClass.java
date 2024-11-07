@@ -153,5 +153,6 @@ public class TestingClass {
 		
 		System.out.println(l1.getEndPoint());
 		System.out.println(new Point());
+		
 	}
 }
