@@ -22,6 +22,11 @@ public class Rectangle {
 		this.selected = selected;
 	}
 	
+	public boolean contains(int x, int y) {
+		return (x >= upperLeft.getX() && x <= upperLeft.getX() + width) &&
+				(y >= upperLeft.getY() && y <= upperLeft.getY() + height); 
+	}
+	
 	@Override
 	public String toString() {
 		return "Upper left point: (" + upperLeft.getX() + ", " +
