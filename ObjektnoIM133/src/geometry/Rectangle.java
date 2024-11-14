@@ -22,6 +22,23 @@ public class Rectangle {
 		this.selected = selected;
 	}
 	
+	@Override
+	public String toString() {
+		return "Upper left point: (" + upperLeft.getX() + ", " +
+				upperLeft.getY() + "), width = " + width + ", height = " +
+				height;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof Rectangle) {
+			Rectangle temp = (Rectangle) o;
+			if(area() == temp.area()) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	public int area() {
 		return width * height;

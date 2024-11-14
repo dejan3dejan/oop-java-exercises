@@ -129,30 +129,18 @@ public class TestingClass {
 		/*
 		 * =============================================
 		 * =============================================
-		 * 					VEZBE 4
+		 * 					VEZBE 6
 		 */
-		p2.setX(20);
-		Line l1 = new Line();
-		System.out.println("Vrednost startPoint-a je: " + l1.getStartPoint());
-		System.out.println("Vrednost endPoint-a je: " + l1.getEndPoint());
-		System.out.println("Vrednost selected-a je: " + l1.isSelected());
-//		l1.getStartPoint().getX(); OVDE NE FUNKCIONISE ZATO STO JE
-//		START POINT NULL
+
 		
-		l1.setStartPoint(p1);
-		System.out.println(l1.getStartPoint().getX());
 		
-		l1.setEndPoint(new Point());
-		System.out.println(l1.getEndPoint().getX());
+		System.out.println(p1 instanceof Object);
+		Object obj = new Object();
+		System.out.println(obj instanceof Point);
 		
-		System.out.println(l1.length());
-		System.out.println(l1.getStartPoint().distance(l1.getEndPoint()));
-		
-		System.out.println(l1.getStartPoint());
 		System.out.println(p1);
-		
-		System.out.println(l1.getEndPoint());
-		System.out.println(new Point());
-		
+		System.out.println(p2);
+		p2.setX(20);
+		System.out.println(p1.equals(p2));
 	}
 }

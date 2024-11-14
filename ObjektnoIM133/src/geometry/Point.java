@@ -32,6 +32,17 @@ public class Point {
 		return "(" + x + ", " + y + ")";
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof Point) {
+			Point temp = (Point) o;
+			if(x == temp.getX() && y == temp.getY()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public int getX() {
 		return x;
 	}
