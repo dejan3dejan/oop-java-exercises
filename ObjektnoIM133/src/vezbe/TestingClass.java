@@ -2,6 +2,10 @@ package vezbe;
 
 import geometry.Line;
 import geometry.Point;
+import geometry.Circle;
+import geometry.Donut;
+import geometry.Rectangle;
+import geometry.Shape;
 
 public class TestingClass {
 
@@ -142,5 +146,16 @@ public class TestingClass {
 		System.out.println(p2);
 		p2.setX(20);
 		System.out.println(p1.equals(p2));
+		
+		
+		/*
+		 * =============================================
+		 * =============================================
+		 * 					VEZBE 7
+		 */
+
+		Donut d1 = new Donut (new Point(30, 30), 30, 15);
+		System.out.println(d1 instanceof Shape);
+		System.out.println(d1.isSelected());
 	}
 }
