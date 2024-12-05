@@ -1,6 +1,7 @@
 package geometry;
+import java.awt.Graphics;
 
-public class Donut extends Circle {
+public class Donut extends Circle implements Moveable {
 	
 	private int innerRadius;
 	
@@ -16,6 +17,28 @@ public class Donut extends Circle {
 	public Donut(Point center, int radius, int innerRadius, boolean selected) {
 		this(center, radius, innerRadius);
 		this.selected = selected;
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		super.draw(g);
+		g.drawOval(center.getX()-innerRadius, center.getY()-innerRadius,
+				innerRadius*2, innerRadius*2);
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " , innerRadius = " + innerRadius;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof Donut) {
+			Donut temp = (Donut)o;
+			if(radius == temp.radius && innerRadius == temp.innerRadius)
+				return true;
+		}
+		return false;
 	}
 	
 	@Override

@@ -1,6 +1,7 @@
 package geometry;
+import java.awt.Graphics;
 
-public class Line extends Shape {
+public class Line extends Shape implements Moveable {
 	
 	private Point startPoint;
 	private Point endPoint;
@@ -17,6 +18,23 @@ public class Line extends Shape {
 	public Line(Point startPoint, Point endPoint, boolean selected){
 		this(startPoint,endPoint);
 		this.selected = selected;
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		g.drawLine(startPoint.getX(), startPoint.getY(),
+				endPoint.getX(), endPoint.getY());
+	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		return;
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		startPoint.moveBy(byX, byY);
+		endPoint.moveBy(byX, byY);
 	}
 	
 	public double length() {
@@ -45,6 +63,15 @@ public class Line extends Shape {
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public int compareTo(Shape o) {
+		if(o instanceof Line) {
+		 Line temp = (Line) o;
+		 return (int)(this.length() - temp.length());
+		}
+		return 0;
 	}
 	
 	public Point getStartPoint() {

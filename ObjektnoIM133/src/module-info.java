@@ -6,4 +6,5 @@
  *
  */
 module ObjektnoIM133 {
+	requires java.desktop;
 }
