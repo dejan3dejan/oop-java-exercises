@@ -125,3 +125,4 @@ public class PnlDrawing extends JPanel {
         repaint();
     }
 }
+

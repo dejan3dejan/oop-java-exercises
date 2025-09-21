@@ -78,3 +78,4 @@ public class Point extends Shape {
         return x == point.x && y == point.y;
     }
 }
+

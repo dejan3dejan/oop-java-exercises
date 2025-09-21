@@ -96,3 +96,4 @@ public class Line extends Shape {
         return startPoint.equals(line.startPoint) && endPoint.equals(line.endPoint);
     }
 }
+

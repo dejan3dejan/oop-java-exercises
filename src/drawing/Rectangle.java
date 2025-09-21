@@ -107,3 +107,4 @@ public class Rectangle extends Shape {
                upperLeft.equals(rectangle.upperLeft);
     }
 }
+
